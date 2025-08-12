@@ -1,15 +1,9 @@
+import { MutatingDots} from "react-loader-spinner";
 
-import styles from "./Loader.module.css";
-
-export default function Loader({ count = 12 }) {
+export default function Loader() {
   return (
-    <ul className={styles.gallery}>
-      {Array.from({ length: count }).map((_, idx) => (
-        <li key={idx} className={styles.skeletonCard}>
-          <div className={styles.skeletonImage}></div>
-          <div className={styles.skeletonText}></div>
-        </li>
-      ))}
-    </ul>
+    <div style={{ display: "flex", justifyContent: "center", margin: "20px 0" }}>
+      <MutatingDots height={80} width={80} color="#4d6aa9ff" visible={true} />
+    </div>
   );
 }

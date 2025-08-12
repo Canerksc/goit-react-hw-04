@@ -19,17 +19,19 @@ export default function App() {
   useEffect(() => {
     if (!query) return;
     const load = async () => {
-      try {
-        setLoading(true);
-        setError("");
-        const data = await fetchImages(query, page);
-        setImages((prev) => [...prev, ...data.results]);
-      } catch {
-        setError("Veri alınırken hata oluştu");
-      } finally {
-        setLoading(false);
-      }
-    };
+  try {
+    setLoading(true);
+    setError("");
+    const data = await fetchImages(query, page);
+    await new Promise((res) => setTimeout(res, 2000));
+    setImages((prev) => [...prev, ...data.results]);
+  } catch {
+    setError("Veri alınırken hata oluştu");
+  } finally {
+    setLoading(false);
+  }
+};
+
     load();
   }, [query, page]);
 

@@ -23,7 +23,6 @@ export default function SearchBar({ onSubmit }) {
           className="input"
           type="text"
           autoComplete="off"
-          autoFocus
           placeholder="Search images and photos"
           value={query}
           onChange={(e) => setQuery(e.target.value)}

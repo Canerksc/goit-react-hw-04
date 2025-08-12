@@ -1,11 +1,12 @@
 header {
   background-color: #0e36a5dc;
   padding: 15px;
-  width: 100%;
-  height: 100px;
+  width: 98%;
+  height: 20vh;
   border-radius: 10px;
   margin: 0px;
 }
+
 
 form {
   display: flex;
@@ -18,8 +19,8 @@ form {
   justify-content: space-between;
   border-radius: 100px;
   border: 0px solid #ccc;
-  margin-top: 25px;
-  
+  margin-top: 5vh;
+  box-shadow: 0 1px 1px #ff9800;
 }
 
 input {
@@ -33,5 +34,9 @@ input {
 
 input:focus {
   outline: none;
+}
+
+input:focus::placeholder {
+  color: transparent;
 }
 
