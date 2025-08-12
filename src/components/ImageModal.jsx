@@ -29,10 +29,11 @@ export default function ImageModal({ isOpen, onClose, image }) {
           className={styles.modalImage}
         />
         <div className={styles.modalInfo}>
-          <p><strong>Yazar:</strong> {user?.name || "Bilinmeyen"}</p>
-          <p><strong>Beğeniler:</strong> {likes}</p>
-          {description && <p><strong>Açıklama:</strong> {description}</p>}
-        </div>
+  <p><strong>Yazar:</strong> {user?.name || "Bilinmeyen"}</p>
+  <p><strong>Beğeniler:</strong> {likes ?? 0}</p>
+  {description && <p><strong>Açıklama:</strong> {description}</p>}
+</div>
+
       </div>
     </Modal>
   );
