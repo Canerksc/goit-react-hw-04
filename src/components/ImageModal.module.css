@@ -1,0 +1,78 @@
+.modalOverlay {
+  position: fixed;
+  inset: 0; 
+  background-color: rgba(0, 0, 0, 0.9); 
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  position: relative;
+  width: 100vw;  
+  height: 100vh; 
+  padding: 0;
+  border-radius: 0; 
+  overflow: hidden;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.modalClose {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 32px;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  user-select: none;
+}
+
+
+.modalClose:hover {
+  color: #ff9800;
+}
+.modalBody {
+  text-align: center;
+   
+}
+
+.modalImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  pointer-events: none; 
+}
+
+
+.modalInfo {
+  display: flex;
+  gap: 20px;            
+  justify-content: center;  
+  flex-wrap: wrap;      
+  color: antiquewhite;
+  font-size: 16px;
+}
+
+.modalInfo p {
+  margin: 0;            
+  padding: 4px 8px;
+  background-color: rgba(255, 255, 255, 0.1); 
+  border-radius: 6px;
+  white-space: nowrap;  
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease;
+}
+
+.modalInfo p:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: default;
+}
+
