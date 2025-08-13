@@ -1,8 +1,8 @@
-import "./LoadMoreBtn.module.css";
+import styles from "./LoadMoreBtn.module.css";
 export default function LoadMoreBtn({ onClick }) {
   return (
     <div style={{ textAlign: "center", margin: "20px" }}>
-      <button onClick={onClick} >Daha Fazla Yükle</button>
+      <button className={styles.loadMoreBtn} onClick={onClick} >Daha Fazla Yükle</button>
     </div>
   );
 }
