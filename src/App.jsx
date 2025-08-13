@@ -7,7 +7,7 @@ import ErrorMessage from "./components/ErrorMessage";
 import LoadMoreBtn from "./components/LoadMoreBtn";
 import ImageModal from "./components/ImageModal";
 import { fetchImages } from "./API/unsplash";
-import TestEnv from "./TestEnv";
+
 
 
 export default function App() {
@@ -45,7 +45,6 @@ export default function App() {
 
   return (
     <div>
-      <TestEnv />
       <Toaster />
       <SearchBar onSubmit={handleSearch} />
       {error && <ErrorMessage message={error} />}
